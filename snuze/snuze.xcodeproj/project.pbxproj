@@ -13,6 +13,7 @@
 		601139B123327237005C4A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601139AF23327237005C4A02 /* LaunchScreen.storyboard */; };
 		601139BC23327237005C4A02 /* snuzeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601139BB23327237005C4A02 /* snuzeTests.swift */; };
 		601139C723327237005C4A02 /* snuzeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601139C623327237005C4A02 /* snuzeUITests.swift */; };
+		601139D92332774A005C4A02 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601139D82332774A005C4A02 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		601139C223327237005C4A02 /* snuzeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = snuzeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		601139C623327237005C4A02 /* snuzeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snuzeUITests.swift; sourceTree = "<group>"; };
 		601139C823327237005C4A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		601139D82332774A005C4A02 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				601139D623327494005C4A02 /* Models */,
 				601139D523327490005C4A02 /* Views */,
 				601139D423327488005C4A02 /* Controllers */,
+				601139D723327739005C4A02 /* Extensions */,
 			);
 			path = snuze;
 			sourceTree = "<group>";
@@ -144,6 +147,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		601139D723327739005C4A02 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				601139D82332774A005C4A02 /* Helpers.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				601139A923327235005C4A02 /* HomeViewController.swift in Sources */,
+				601139D92332774A005C4A02 /* Helpers.swift in Sources */,
 				601139A723327235005C4A02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
