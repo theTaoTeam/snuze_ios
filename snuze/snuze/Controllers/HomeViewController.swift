@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
     var customTimePicker: CustomTimePicker!
     let timePicker: UIPickerView = {
         let picker = UIPickerView()
-//        picker.setValue(UIColor.white, forKey: "textColor")
         return picker
     }()
     
@@ -29,15 +28,18 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         setupNavBar()
         setupTimePicker()
         
         view.addSubview(timePicker)
         view.addSubview(alarmButton)
         
+
+        timePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50).isActive = true
+        timePicker.heightAnchor.constraint(equalToConstant: 100)
         
-        view.addConstraintsWithFormat(format: "V:|[v0]-16-[v1(50)]-200-|", views: timePicker, alarmButton)
+        view.addConstraintsWithFormat(format: "V:[v0(50)]-200-|", views: alarmButton)
         view.addConstraintsWithFormat(format: "H:|[v0]|", views: timePicker)
         view.addConstraintsWithFormat(format: "H:|-100-[v0]-100-|", views: alarmButton)
         
@@ -57,6 +59,16 @@ extension HomeViewController {
         customTimePicker = CustomTimePicker()
         timePicker.delegate = customTimePicker
         timePicker.dataSource = customTimePicker
+        
+
+        for component in 0...3 {
+            if component == 0 || component == 2 {
+                timePicker.selectRow(customTimePicker.loopingMargin / 2, inComponent: component, animated: false)
+            } else {
+                timePicker.selectRow(0, inComponent: component, animated: false)
+            }
+
+        }
     }
 }
 
