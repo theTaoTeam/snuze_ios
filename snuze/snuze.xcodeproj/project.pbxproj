@@ -96,10 +96,12 @@
 			isa = PBXGroup;
 			children = (
 				601139A623327235005C4A02 /* AppDelegate.swift */,
-				601139A823327235005C4A02 /* ViewController.swift */,
 				601139AD23327237005C4A02 /* Assets.xcassets */,
 				601139AF23327237005C4A02 /* LaunchScreen.storyboard */,
 				601139B223327237005C4A02 /* Info.plist */,
+				601139D623327494005C4A02 /* Models */,
+				601139D523327490005C4A02 /* Views */,
+				601139D423327488005C4A02 /* Controllers */,
 			);
 			path = snuze;
 			sourceTree = "<group>";
@@ -120,6 +122,28 @@
 				601139C823327237005C4A02 /* Info.plist */,
 			);
 			path = snuzeUITests;
+			sourceTree = "<group>";
+		};
+		601139D423327488005C4A02 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				601139A823327235005C4A02 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		601139D523327490005C4A02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		601139D623327494005C4A02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
