@@ -118,7 +118,14 @@ extension CustomTimePicker: UIPickerViewDataSource {
             rowCount = 0
         }
         
-        return rowCount > 1 ? loopingMargin * rowCount : 1
+        //handle meridian and separator rowCount
+        if component == 3 {
+            return 2
+        } else if component == 1 {
+            return 1
+        }
+        
+        return loopingMargin * rowCount
     }
 }
 
