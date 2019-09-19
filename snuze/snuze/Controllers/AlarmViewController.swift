@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class AlarmViewController: UIViewController {
     
     var customTimePicker: CustomTimePicker!
     let timePicker: UIPickerView = {
@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
 }
 
 //MARK: Helper Methods
-extension HomeViewController {
+extension AlarmViewController {
     
     fileprivate func setupNavBar() {
         if let navBar = navigationController?.navigationBar {
