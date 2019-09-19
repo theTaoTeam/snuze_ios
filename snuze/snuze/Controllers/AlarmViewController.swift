@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class AlarmViewController: UIViewController {
-    var alarmTimer:Timer?
-//    var player:AVAudioPlayer? 
     var customTimePicker: CustomTimePicker!
+    var alarmTimer:Timer?
+    var player:AVAudioPlayer?
+    var audioStartTime:Date?
     
     let timePicker: UIPickerView = {
         let picker = UIPickerView()
@@ -34,7 +36,8 @@ class AlarmViewController: UIViewController {
         view.backgroundColor = .black
         setupNavBar()
         setupTimePicker()
-        
+        setupAudioEnvironment()
+
         view.addSubview(timePicker)
         view.addSubview(alarmButton)
         
@@ -80,7 +83,7 @@ extension AlarmViewController {
         let meridianIndex = timePicker.selectedRow(inComponent: 3)
         let hourIndex = timePicker.selectedRow(inComponent: 0) % customTimePicker.loopingMargin
         let minutesIndex = timePicker.selectedRow(inComponent: 2) % customTimePicker.loopingMargin
-        print(hourIndex)
+   
         setAlarmForDeviceAlwaysOnMode(hour: hours[hourIndex], minute: minutes[minutesIndex], meridian: customTimePicker.meridians[meridianIndex])
     }
     
