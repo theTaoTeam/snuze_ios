@@ -10,6 +10,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    var customTimePicker: CustomTimePicker!
+    let timePicker: UIPickerView = {
+        let picker = UIPickerView()
+        return picker
+    }()
+    
+    
     let alarmButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("set alarm", for: .normal)
@@ -22,13 +29,18 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        
         setupNavBar()
+        setupTimePicker()
         
+        view.addSubview(timePicker)
         view.addSubview(alarmButton)
         
+
+        timePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50).isActive = true
+        timePicker.heightAnchor.constraint(equalToConstant: 100)
         
         view.addConstraintsWithFormat(format: "V:[v0(50)]-200-|", views: alarmButton)
+        view.addConstraintsWithFormat(format: "H:|[v0]|", views: timePicker)
         view.addConstraintsWithFormat(format: "H:|-100-[v0]-100-|", views: alarmButton)
         
     }
@@ -40,6 +52,22 @@ extension HomeViewController {
     fileprivate func setupNavBar() {
         if let navBar = navigationController?.navigationBar {
             navBar.isHidden = true
+        }
+    }
+    
+    fileprivate func setupTimePicker() {
+        customTimePicker = CustomTimePicker()
+        timePicker.delegate = customTimePicker
+        timePicker.dataSource = customTimePicker
+        
+
+        for component in 0...3 {
+            if component == 0 || component == 2 {
+                timePicker.selectRow(customTimePicker.loopingMargin / 2, inComponent: component, animated: false)
+            } else {
+                timePicker.selectRow(0, inComponent: component, animated: false)
+            }
+
         }
     }
 }
