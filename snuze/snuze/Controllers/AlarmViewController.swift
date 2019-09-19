@@ -9,8 +9,10 @@
 import UIKit
 
 class AlarmViewController: UIViewController {
-    
+    var alarmTimer:Timer?
+//    var player:AVAudioPlayer? 
     var customTimePicker: CustomTimePicker!
+    
     let timePicker: UIPickerView = {
         let picker = UIPickerView()
         return picker
@@ -23,6 +25,7 @@ class AlarmViewController: UIViewController {
         button.backgroundColor = .cyan
         button.layer.cornerRadius = 15
         button.tintColor = .blue
+        button.addTarget(self, action: #selector(setAlarm), for: .touchUpInside)
         return button
     }()
     
@@ -70,5 +73,16 @@ extension AlarmViewController {
 
         }
     }
+    
+    @objc func setAlarm() {
+        let hours = customTimePicker.hours
+        let minutes = customTimePicker.minutes
+        let meridianIndex = timePicker.selectedRow(inComponent: 3)
+        let hourIndex = timePicker.selectedRow(inComponent: 0) % customTimePicker.loopingMargin
+        let minutesIndex = timePicker.selectedRow(inComponent: 2) % customTimePicker.loopingMargin
+        print(hourIndex)
+        setAlarmForDeviceAlwaysOnMode(hour: hours[hourIndex], minute: minutes[minutesIndex], meridian: customTimePicker.meridians[meridianIndex])
+    }
+    
 }
 

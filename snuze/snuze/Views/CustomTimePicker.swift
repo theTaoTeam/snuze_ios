@@ -13,11 +13,11 @@ class CustomTimePicker: UIPickerView {
     let minutes = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
     let hours = [1,2,3,4,5,6,7,8,9,10,11,12]
     let meridians = ["AM", "PM"]
-    let separator = [":"]
+    fileprivate let separator = [":"]
     
-    let customWidth: CGFloat = 50
-    let customHeight: CGFloat = 50
-    let loopingMargin: Int = 10
+    fileprivate let customWidth: CGFloat = 50
+    fileprivate let customHeight: CGFloat = 50
+    let loopingMargin: Int = 20
     
 }
 

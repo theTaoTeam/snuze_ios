@@ -15,6 +15,7 @@
 		601139C723327237005C4A02 /* snuzeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601139C623327237005C4A02 /* snuzeUITests.swift */; };
 		601139D92332774A005C4A02 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601139D82332774A005C4A02 /* Helpers.swift */; };
 		601139DB2332A4F4005C4A02 /* CustomTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601139DA2332A4F4005C4A02 /* CustomTimePicker.swift */; };
+		601139DD2333DE10005C4A02 /* AlarmExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601139DC2333DE10005C4A02 /* AlarmExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		601139C823327237005C4A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		601139D82332774A005C4A02 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		601139DA2332A4F4005C4A02 /* CustomTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimePicker.swift; sourceTree = "<group>"; };
+		601139DC2333DE10005C4A02 /* AlarmExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				601139A823327235005C4A02 /* AlarmViewController.swift */,
+				601139DC2333DE10005C4A02 /* AlarmExtensions.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				601139A923327235005C4A02 /* AlarmViewController.swift in Sources */,
+				601139DD2333DE10005C4A02 /* AlarmExtensions.swift in Sources */,
 				601139DB2332A4F4005C4A02 /* CustomTimePicker.swift in Sources */,
 				601139D92332774A005C4A02 /* Helpers.swift in Sources */,
 				601139A723327235005C4A02 /* AppDelegate.swift in Sources */,
