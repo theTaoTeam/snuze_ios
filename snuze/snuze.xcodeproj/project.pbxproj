@@ -52,7 +52,6 @@
 		601139D82332774A005C4A02 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		601139DA2332A4F4005C4A02 /* CustomTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimePicker.swift; sourceTree = "<group>"; };
 		601139DC2333DE10005C4A02 /* AlarmExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmExtensions.swift; sourceTree = "<group>"; };
-		601139DE233406C7005C4A02 /* song.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = song.caf; sourceTree = "<group>"; };
 		601139DF23340C9C005C4A02 /* problemas.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = problemas.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +107,6 @@
 				601139AD23327237005C4A02 /* Assets.xcassets */,
 				601139AF23327237005C4A02 /* LaunchScreen.storyboard */,
 				601139B223327237005C4A02 /* Info.plist */,
-				601139DE233406C7005C4A02 /* song.caf */,
 				601139DF23340C9C005C4A02 /* problemas.wav */,
 				601139D623327494005C4A02 /* Models */,
 				601139D523327490005C4A02 /* Views */,
