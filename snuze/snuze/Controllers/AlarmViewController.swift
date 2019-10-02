@@ -43,7 +43,7 @@ class AlarmViewController: UIViewController {
         
 
         timePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50).isActive = true
-        timePicker.heightAnchor.constraint(equalToConstant: 100)
+        timePicker.heightAnchor.constraint(equalToConstant: 150).isActive = true
         
         view.addConstraintsWithFormat(format: "V:[v0(50)]-200-|", views: alarmButton)
         view.addConstraintsWithFormat(format: "H:|[v0]|", views: timePicker)
